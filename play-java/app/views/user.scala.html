@@ -1,0 +1,11 @@
+@(myForm: Form[models.User])
+
+@main("User") {
+
+  @helper.form(action = routes.HomeController.createUser()) {
+    @helper.inputText(myForm("email"))
+    @helper.inputPassword(myForm("password"))
+    <input type="submit" class="btn btn-primary" value="Sign Up">
+  }
+
+}
